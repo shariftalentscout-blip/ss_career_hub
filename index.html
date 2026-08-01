@@ -8,39 +8,47 @@
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:'Segoe UI',Arial,sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#333;min-height:100vh}
     .container{max-width:1200px;margin:0 auto;padding:20px}
-    
     .header{text-align:center;padding:50px 20px;background:rgba(255,255,255,0.95);border-radius:20px;margin-bottom:30px;box-shadow:0 10px 30px rgba(0,0,0,0.2)}
     
+    /* MAIN LOGO TOP LO */
     .main-logo{margin-bottom:20px}
-    .main-logo img{height:130px;width:auto;background:white;padding:15px;border-radius:18px;box-shadow:0 6px 20px rgba(0,0,0,0.15)}
+    .main-logo img{height:140px;width:auto;background:white;padding:18px;border-radius:20px;box-shadow:0 6px 20px rgba(0,0,0,0.15)}
     
-    .logos{display:flex;justify-content:center;gap:25px;margin-bottom:30px;flex-wrap:wrap}
-    .logos img{height:70px;width:auto;background:white;padding:10px;border-radius:14px;box-shadow:0 3px 10px rgba(0,0,0,0.1);transition:transform 0.3s}
-    .logos img:hover{transform:translateY(-5px)}
+    /* 3 SMALL LOGOS */
+    .logos{display:flex;justify-content:center;align-items:flex-start;gap:25px;margin-bottom:30px;flex-wrap:wrap}
+    .logos img{height:70px;width:auto;background:white;padding:10px;border-radius:14px;box-shadow:0 3px 10px rgba(0,0,0,0.1)}
     
     .header h1{font-size:2.8em;color:#667eea;margin-bottom:12px;font-weight:700}
     .header p{font-size:1.3em;color:#555;font-weight:400}
     
     @media(max-width:768px){
-        .main-logo img{height:100px;padding:12px}
+        .main-logo img{height:110px}
         .logos{gap:15px}
-        .logos img{height:50px;padding:8px}
+        .logos img{height:50px}
         .header h1{font-size:2em}
-        .header p{font-size:1.1em}
     }
 </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
+            
+            <!-- 1. MAIN LOGO TOP LO -->
             <div class="main-logo">
                 <img src="ss%20logo.jpeg" alt="SS Career Hub Main">
             </div>
+
+            <!-- 2. 3 SMALL LOGOS KINDHA -->
             <div class="logos">
                 <img src="campus.jpeg" alt="Campus Infinity">
                 <img src="biz.jpeg" alt="Business">
-                <img src="fourth-logo.jpeg" alt="4th Logo">
+                <div style="text-align:center;">
+                    <img src="OperationalInfinity.jpeg" alt="Operational Infinity">
+                    <p style="margin-top:8px; font-size:14px; font-weight:600; color:#667eea;">Operational. Infinity</p>
+                </div>
             </div>
+
+            <!-- 3. TITLE -->
             <h1>WELCOME TO SS CAREER HUB</h1>
             <p>One Unified Hub. Infinite Growth for Classrooms, Careers, and Businesses.</p>
         </div>
