@@ -1,75 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="te">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SS CAREER HUB</title>
-<style>
-    :root {
-        --navy: #0A1F44;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-        background: var(--navy);
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 40px 20px;
-        gap: 70px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS Career Hub</title>
+    <!-- Font Awesome Icons లింక్ -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f7f6; color: #333; }
+        
+        /* హెడర్ స్టైల్ */
+        header { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: white; text-align: center; padding: 60px 20px; }
+        header h1 { font-size: 2.5rem; margin-bottom: 10px; letter-spacing: 1px; }
+        header p { font-size: 1.1rem; opacity: 0.9; }
 
-    /* MAIN LOGO TOP */
-  .logo-main img {
-        height: 200px;
-        background: white;
-        padding: 25px;
-        border-radius: 24px;
-        box-shadow: 0 8px 35px rgba(212,175,55,0.4)
-    }
+        /* సర్వీసెస్ సెక్షన్ */
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 20px; }
+        
+        .card { background: white; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card i { font-size: 3rem; color: #203a43; margin-bottom: 15px; }
+        .card h3 { font-size: 1.4rem; margin-bottom: 12px; color: #111; }
+        .card p { color: #666; font-size: 0.95rem; line-height: 1.6; }
 
-    /* 3 PILLARS LOGOS ONLY */
-  .logos {
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        gap:60px;
-        flex-wrap:wrap
-    }
-  .logos img {
-        height:110px;
-        background:white;
-        padding:18px;
-        border-radius:20px;
-        box-shadow:0 6px 25px rgba(0,0,0,0.3);
-        transition: transform 0.3s;
-    }
-  .logos img:hover {
-        transform: scale(1.1);
-    }
+        /* కాంటాక్ట్ ఫారమ్ */
+        .contact-section { background: white; max-width: 600px; margin: 50px auto; padding: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .contact-section h2 { text-align: center; margin-bottom: 25px; color: #203a43; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #444; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; }
+        .submit-btn { width: 100%; padding: 12px; background: #203a43; color: white; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; font-weight: bold; }
+        .submit-btn:hover { background: #2c5364; }
 
-    @media(max-width:768px){
-      .logo-main img{ height: 140px; padding: 18px; }
-      .logos img{ height:85px; padding: 14px; }
-      .logos{ gap:35px }
-       body{ gap: 50px; }
-    }
-</style>
+        /* ఫుటర్ */
+        footer { text-align: center; padding: 20px; background: #0f2027; color: white; font-size: 0.9rem; }
+
+        /* ఫ్లోటింగ్ వాట్సాప్ బటన్ */
+        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 3px #999; z-index: 100; display: flex; align-items: center; justify-content: center; text-decoration: none; }
+        .whatsapp-float:hover { background-color: #128C7E; }
+    </style>
 </head>
 <body>
 
-    <!-- MAIN LOGO -->
-    <div class="logo-main">
-        <img src="ss%20logo.jpeg" alt="SS Career Hub">
+    <!-- హెడర్ -->
+    <header>
+        <h1>SS CAREER HUB</h1>
+        <p>యువతకు ఉద్యోగ నైపుణ్యాలు మరియు వ్యాపార పరిష్కారాలను అందించే నమ్మకమైన సంస్థ</p>
+    </header>
+
+    <!-- సర్వీసెస్ -->
+    <div class="container">
+        <div class="services-grid">
+            <div class="card">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h3>Campus Infinity</h3>
+                <p>విద్యార్థులకు కాలేజీ స్థాయి నుండే కెరీర్ గైడెన్స్, ఇంటర్న్ షిప్స్ మరియు క్యాంపస్ ప్లేస్‌మెంట్ ట్రైనింగ్ అందిస్తాము.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Biz Core Infinity</h3>
+                <p>కొత్త వ్యాపారాలు ప్రారంభించడానికి కావలసిన స్ట్రాటజీస్, మార్కెటింగ్ మరియు బిజినెస్ డెవలప్‌మెంట్ సపోర్ట్ ఇస్తాము.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-gears"></i>
+                <h3>Operational Infinity</h3>
+                <p>మీ బిజినెస్ రోజువారీ పనులు సులభంగా సాగడానికి కావలసిన ఆపరేషనల్ మరియు సాఫ్ట్‌వేర్ మేనేజ్‌మెంట్ సొల్యూషన్స్.</p>
+            </div>
+        </div>
     </div>
 
-    <!-- 3 PILLARS LOGOS ONLY -->
-    <div class="logos">
-        <img src="campus.jpeg" alt="Campus Infinity">
-        <img src="biz.jpeg" alt="Biz Core Infinity">
-        <img src="Operational infinity.jpeg" alt="Operational Infinity">
+    <!-- కాంటాక్ట్ ఫారమ్ -->
+    <div class="contact-section">
+        <h2>ఉచిత కౌన్సిలింగ్ కోసం సంప్రదించండి</h2>
+        <form>
+            <div class="form-group">
+                <label>మీ పేరు:</label>
+                <input type="text" placeholder="మీ పేరు ఇక్కడ రాయండి" required>
+            </div>
+            <div class="form-group">
+                <label>ఫోన్ నంబర్:</label>
+                <input type="tel" placeholder="మీ మొబైల్ నంబర్" required>
+            </div>
+            <div class="form-group">
+                <label>మీకు కావాల్సిన సర్వీస్:</label>
+                <textarea rows="4" placeholder="మీకు ఏ సర్వీస్ కావాలో ఇక్కడ తెలియజేయండి"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">సమర్పించండి (Submit)</button>
+        </form>
     </div>
+
+    <!-- ఫుటర్ -->
+    <footer>
+        <p>&copy; 2026 SS Career Hub. All Rights Reserved.</p>
+    </footer>
+
+    <!-- వాట్సాప్ లింక్  -->
+    <!-- 919059527699 ప్ -->
+    <a href="https://wa.me" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
 </body>
 </html>
