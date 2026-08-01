@@ -3,151 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SS CAREER HUB - From Classroom to Boardroom</title>
+<title>SS CAREER HUB</title>
 <style>
     :root {
         --navy: #0A1F44;
-        --gold: #D4AF37;
-        --white: #FFFFFF;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
-    body { background: var(--navy); color: var(--white); line-height: 1.7; }
-   .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
-
-    /* HEADER TOP - LOGO LEFT, TEXT RIGHT */
-   .header-top {
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        background: var(--navy);
+        min-height: 100vh;
         display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        justify-content: space-between;
-        gap: 40px;
-        padding: 40px;
-        background: #0F2A5A;
-        border-radius: 12px;
-        margin-bottom: 30px;
-        flex-wrap: wrap;
+        padding: 40px 20px;
+        gap: 70px;
     }
-   .logo-main { flex-shrink: 0; }
-   .logo-main img {
-        height: 120px;
+
+    /* MAIN LOGO TOP */
+  .logo-main img {
+        height: 200px;
         background: white;
-        padding: 15px;
-        border-radius: 16px;
-        box-shadow: 0 4px 15px rgba(212,175,55,0.3)
+        padding: 25px;
+        border-radius: 24px;
+        box-shadow: 0 8px 35px rgba(212,175,55,0.4)
     }
-   .header-text { flex: 1; }
-   .header-text h1 { font-size: 40px; color: var(--gold); margin-bottom: 12px; }
-   .header-text p { font-size: 18px; color: var(--white); }
 
-    /* SERVICES LOGOS - PINAA CENTER */
-   .services-header { text-align: center; margin-bottom: 40px; }
-   .services-header h2 { color: var(--gold); font-size: 28px; margin-bottom: 20px; }
-   .logos { display:flex; justify-content:center; align-items:flex-start; gap:35px; flex-wrap:wrap }
-   .logos img { height:75px; background:white; padding:12px; border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,0.2) }
-   .logo-box { text-align:center }
-   .logo-box p { margin-top:10px; font-size:14px; font-weight:600; color:var(--gold) }
-
-    /* WHY SECTION */
-   .why { background: #0F2A5A; padding: 60px 20px; border-radius: 12px; margin: 40px 0; }
-   .why h2 { color: var(--gold); font-size: 32px; margin-bottom: 20px; text-align: center; }
-   .why p { font-size: 18px; margin-bottom: 15px; }
-   .signature { text-align: right; margin-top: 20px; color: var(--gold); font-weight: bold; }
-
-    /* SERVICES CARDS */
-   .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 40px 0; }
-   .card { background: #0F2A5A; padding: 30px; border-radius: 12px; border-left: 4px solid var(--gold); }
-   .card h3 { color: var(--gold); font-size: 22px; margin-bottom: 10px; }
-
-    /* CONTACT */
-   .contact { text-align: center; padding: 60px 20px; }
-   .btn { background: var(--gold); color: var(--navy); padding: 15px 35px;
-           text-decoration: none; border-radius: 8px; font-weight: bold;
-           font-size: 18px; display: inline-block; margin: 10px; }
-   .btn:hover { background: #E6C757; }
-   .email { margin-top: 20px; font-size: 16px; }
+    /* 3 PILLARS LOGOS ONLY */
+  .logos {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:60px;
+        flex-wrap:wrap
+    }
+  .logos img {
+        height:110px;
+        background:white;
+        padding:18px;
+        border-radius:20px;
+        box-shadow:0 6px 25px rgba(0,0,0,0.3);
+        transition: transform 0.3s;
+    }
+  .logos img:hover {
+        transform: scale(1.1);
+    }
 
     @media(max-width:768px){
-       .header-top{ flex-direction: column; text-align: center; }
-       .header-text h1{ font-size: 28px; }
-       .logo-main img{ height: 100px; }
-       .logos{ gap:20px }
-       .logos img{ height:60px }
+      .logo-main img{ height: 140px; padding: 18px; }
+      .logos img{ height:85px; padding: 14px; }
+      .logos{ gap:35px }
+       body{ gap: 50px; }
     }
 </style>
 </head>
 <body>
 
-<div class="container">
-
-    <!-- 1. TOP HEADER - LOGO LEFT -->
-    <div class="header-top">
-        <!-- LEFT: MAIN LOGO -->
-        <div class="logo-main">
-            <img src="ss%20logo.jpeg" alt="SS Career Hub">
-        </div>
-
-        <!-- RIGHT: TITLE + TAGLINE -->
-        <div class="header-text">
-            <h1>WELCOME TO SS CAREER HUB</h1>
-            <p>One Unified Hub. Infinite Growth for Classrooms, Careers, and Businesses.</p>
-        </div>
+    <!-- MAIN LOGO -->
+    <div class="logo-main">
+        <img src="ss%20logo.jpeg" alt="SS Career Hub">
     </div>
 
-    <!-- 2. SERVICES MENTION CHESE LOGOS PINAA -->
-    <div class="services-header">
-        <h2>OUR 3 PILLARS</h2>
-        <div class="logos">
-            <img src="campus.jpeg" alt="Campus Infinity">
-            <img src="biz.jpeg" alt="Business">
-            <div class="logo-box">
-                <img src="operational infinity.jpeg" alt="operational infinity">
-               
-    
-</div> 
-            </div>
-        </div>
+    <!-- 3 PILLARS LOGOS ONLY -->
+    <div class="logos">
+        <img src="campus.jpeg" alt="Campus Infinity">
+        <img src="biz.jpeg" alt="Biz Core Infinity">
+        <img src="Operational infinity.jpeg" alt="Operational Infinity">
     </div>
 
-    <!-- 3. WHY CHOOSE US -->
-    <div class="why">
-        <h2>WHY CHOOSE SS CAREER HUB?</h2>
-        <p>"With 5+ years of experience in Job Placements, School Data, and Business Growth Analysis, I saw one common problem:</p>
-        <p><b>Talent is there. Opportunities are there. But the bridge is missing.</b></p>
-        <p>That’s why I started SS CAREER HUB.</p>
-        <p>Our mission is simple: <b>To reduce unemployment to ZERO</b> by connecting the right talent with the right opportunities and empowering businesses to grow infinitely.</p>
-        <p><b>From Campus to Corporate, From School to Startup — We build the bridge.</b>"</p>
-        <div class="signature">— SHARIF<br>Head of Institutional Staffing & Academic Marketing</div>
-    </div>
-
-    <!-- 4. SERVICES & BRANDS CARDS -->
-    <h2 style="text-align:center; color:var(--gold); font-size:32px;">OUR SERVICES & BRANDS</h2>
-    <div class="services">
-        <div class="card">
-            <h3>PILLAR 1: OPERATION INFINITY</h3>
-            <p>For Schools & Colleges<br>
-            → Google Maps Business Profile Setup<br>
-            → Admissions Growth Plans</p>
-        </div>
-        <div class="card">
-            <h3>PILLAR 2: CAMPUS INFINITY 360</h3>
-            <p>For Students & Job Seekers<br>
-            → 360° Career Training<br>
-            → Direct Placements</p>
-        </div>
-        <div class="card">
-            <h3>PILLAR 3: BIZ CORE INFINITY</h3>
-            <p>For Small Businesses (SMBs)<br>
-            → Brand Identity Development<br>
-            → Operations Optimization</p>
-        </div>
-    </div>
-
-    <!-- 5. CONTACT -->
-    <div class="contact">
-        <h2 style="color:var(--gold); font-size:32px; margin-bottom:20px;">LET'S BUILD THE BRIDGE TOGETHER</h2>
-        <a href="https://wa.me/91XXXXXXXXXX" class="btn">Connect with Sharif on WhatsApp</a>
-        <div class="email">Email: sharif.talentscout@gmail.com</div>
-    </div>
-
-</div>
 </body>
 </html>
